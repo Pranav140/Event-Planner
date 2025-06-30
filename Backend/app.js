@@ -17,6 +17,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/v1/message", messageRouter);
+app.get("/",(req,res)=>{
+    res.json({
+        success : true,
+        message:"HABIBI COME TO DUBAI",
+    })
+})
 
 dbConnection();
 
